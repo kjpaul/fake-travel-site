@@ -60,6 +60,36 @@
 
     }
 
+    @mixin atLarge {
+        &--b-margin-until-large {
+            margin-bottom: 0rem;
+        }
+
+        &--large-4 {
+            float: left;
+            width: 33.3%;
+        }
+    
+        &--large-4--larger {
+            width: 37%;
+        }
+        
+        &--large-6 {
+            float: left;
+            width: 50%;
+        }
+
+        &--large-8 {
+            float: left;
+            width: 66.6%;
+        }        
+
+        &--large-8--smaller {
+            width: 63%;
+        }
+
+    }
+
     /* Begin Equal Height Rules */
     &--equal-height-at-medium {
         @mixin atMedium {
@@ -72,4 +102,14 @@
         }
     }
 
+    &--equal-height-at-large {
+        @mixin atLarge {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
 }
