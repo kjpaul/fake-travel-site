@@ -1,115 +1,104 @@
 .row {
 
-    @mixin clearfix;
+  &--t-padding {
+    padding-top: 80px;
+  }
+
+  &--b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  @mixin atMedium {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
     &--gutters {
-        margin-right: -65px;
+    column-gap: 5.3%;
     }
 
-    &--gutters > div {
-        padding-right: 65px;
-    }
-    
     &--gutters-large {
-        margin-right: -100px;
+      column-gap: 8%;
     }
 
-    &--gutters-large > div {
-        padding-right: 100px;
-    }
-
-    &--gutters-small > div {
-        padding-right: 45px;
+    &--gutters-small {
+      column-gap: 3.6%;
     }
 
     &--b-margin-until-medium {
-        margin-bottom: 1rem;
-    }    
-
-    &--t-padding {
-        padding-top: 80px;
+      margin-bottom: 0;
     }
 
+    &--large-1,
+    &--large-2,
+    &--large-3,
+    &--large-4,
+    &--large-5,
+    &--large-6,
+    &--large-7,
+    &--large-8,
+    &--large-9,
+    &--large-10,
+    &--large-11,
+    &--large-12 {
+      grid-column: span 12;
+    }
+
+    &--medium-4 {
+      grid-column: span 4;
+    }
+
+    &--medium-6 {
+      grid-column: span 6;
+    }
+
+    &--medium-8 {
+      grid-column: span 8;
+    }
+
+  }
+
+  @mixin atLarge {
+
+    &--b-margin-until-large {
+      margin-bottom: 0;
+    }
+
+    &--large-4 {
+      grid-column: span 4;
+    }
+
+    &--large-6 {
+      grid-column: span 6;
+    }
+
+    &--large-8 {
+      grid-column: span 8;
+    }
+
+  }
+  
+  /* Begin Equal Height Rules */
+  &--equal-height-at-medium {
     @mixin atMedium {
-        &--b-margin-until-medium {
-            margin-bottom: 0rem;
-        }
-
-        &--medium-4 {
-            float: left;
-            width: 33.3%;
-        }
-    
-        &--medium-4--larger {
-            width: 37%;
-        }
-        
-        &--medium-6 {
-            float: left;
-            width: 50%;
-        }
-
-        &--medium-8 {
-            float: left;
-            width: 66.6%;
-        }        
-
-        &--medium-8--smaller {
-            width: 63%;
-        }
-
+      display: flex;
     }
 
+    & > div {
+      float: none;
+      display: flex;
+    }
+
+  }
+
+  &--equal-height-at-large {
     @mixin atLarge {
-        &--b-margin-until-large {
-            margin-bottom: 0rem;
-        }
+      & > div {
+        display: flex;
+      }
+    }
 
-        &--large-4 {
-            float: left;
-            width: 33.3%;
-        }
     
-        &--large-4--larger {
-            width: 37%;
-        }
-        
-        &--large-6 {
-            float: left;
-            width: 50%;
-        }
 
-        &--large-8 {
-            float: left;
-            width: 66.6%;
-        }        
+  }
 
-        &--large-8--smaller {
-            width: 63%;
-        }
-
-    }
-
-    /* Begin Equal Height Rules */
-    &--equal-height-at-medium {
-        @mixin atMedium {
-            display: flex;
-        }
-
-        & > div {
-            float: none;
-            display: flex;
-        }
-    }
-
-    &--equal-height-at-large {
-        @mixin atLarge {
-            display: flex;
-        }
-
-        & > div {
-            float: none;
-            display: flex;
-        }
-    }
 }
