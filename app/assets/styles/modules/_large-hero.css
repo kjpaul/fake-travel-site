@@ -1,6 +1,5 @@
 .large-hero {
     border-bottom: 10px solid $mainBlue;
-    position: relative;
 
     &--image {
         display: block;
@@ -8,11 +7,6 @@
 
     &--text-content {
         padding-top: 60px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        width: 100%;
         text-align: center;
     }
 
