@@ -1,18 +1,22 @@
 .large-hero {
     border-bottom: 10px solid $mainBlue;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
 
     &--image {
-        display: block;
+        grid-column: 1;
+        grid-row: 1;
+
+        img {
+            display: block;
+        }
     }
 
     &--text-content {
+        align-self: center;
+        grid-column: 1;
+        grid-row: 1;
         padding-top: 60px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        width: 100%;
         text-align: center;
     }
 
@@ -42,7 +46,7 @@
         color: white;
         font-size: 1.1rem;
         font-weight: 100;
-        text-shadow: 2px 2px rgba(0, 0, 0, .1);
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
         max-width: 30rem;
         margin-left: auto;
         margin-right: auto;
