@@ -9,7 +9,7 @@ new RevealOnScroll(document.querySelectorAll(".feature-item"), 75)
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
 new MobileMenu()
 let modal
-
+//yada
 document.querySelectorAll(".open-modal").forEach(elm => {
     elm.addEventListener("click", e => {
         e.preventDefault()
